@@ -713,11 +713,12 @@ p {
 /* #assets main{
     width: 30%;
 } */
-.assets_page {
+/* .assets_page {
   width: 100vw;
-}
+} */
 .asset {
-  width: 30%;
+  min-width: 30vw;
+  max-width: 90vw;
 }
 
 h1 {
