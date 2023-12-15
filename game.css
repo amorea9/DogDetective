@@ -714,7 +714,7 @@ p {
     width: 30%;
 } */
 .assets_page {
-  width: auto;
+  width: 100vw;
 }
 .asset {
   width: 30%;
