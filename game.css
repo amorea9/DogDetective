@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Asul:wght@700&display=swap');
+
+header {
+    font-family: 'Asul', sans-serif;
+    font-size: 1.5em;
+}
+
+
+#home main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1em;
+}
+
+
+#screen {
+    cursor: pointer;
+    position: relative;
+    border: 4px solid black;
+    aspect-ratio: 16/9;
+    width: 100%;
+    background-color: rgb(120, 120, 236);
+    overflow: hidden;
+
+}
+aside {
+    margin-left:10%;
+    margin-right:10%;
+}
+
+#game {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+#game_background {
+    position: absolute;
+    background-image: url(graphics/nightbackground.svg);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+
+}
+#game_ui, #title_screen, #instructions_screen, #game_over, #level_complete, #game_info {
+    font-family: 'Asul', sans-serif;
+
+}
+
+
+#title_screen {
+    position:absolute;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 0.5fr;
+    grid-gap: 1em;
+    background-color: #553275;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+   
+}
+
+.gameLogo {
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row:1;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;  
+    margin-top:10%; 
+}
+
+#playNow {
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row:2;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;   
+    padding: 1em;
+    background-color: lavender;
+    border-radius: 50%;
+    font-size: 2em;
+    
+}
+
+#seeInstructions {
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row:2;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;  
+    padding: 1em;
+    background-color: lavender;
+    border-radius: 50%; 
+    font-size: 2em;
+}
+
+#instructions {
+    font-size: 2em;
+
+}
+
+#instructions_screen {
+    position:absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    aspect-ratio: 16/9;
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left:15%;
+    padding:1em;
+    border-radius: 40px;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+.instruction_img {
+    
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:center;
+}
+.goodExample{
+    width:15%;
+}
+.badExample{
+    width:15%;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+#back {
+    text-align: center;
+    background-color: #553275;
+    padding:0.5em 1em;
+    border-radius: 20px;
+    top:75%;
+    left:43%;
+    color: lavender;
+    margin-top: 2em;
+    margin-bottom:2em;
+    font-size:1.5em;
+
+}
+
+#game_over, #level_complete {
+    position:absolute;
+    display:grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1.5fr 0.5fr 0.5fr;
+    grid-gap: 1em;
+    background-color: #553275;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+#you_lost, #you_won {
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row:2;
+    max-width: 100%;
+    max-height: 100%;
+    margin: 10px;
+    font-size: 1.2em;
+}
+
+.play_again1, .play_again2 {
+    grid-column-start:1;
+    grid-column-end:2;
+    grid-row:3;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;   
+    padding: 1em;
+    background-color: lavender;
+    border-radius: 50%;
+    font-size: 2em; 
+
+}
+.goBack1 {
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row:3;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;  
+    padding: 1em;
+    background-color: lavender;
+    border-radius: 50%; 
+    font-size: 2em;
+
+}
+
+.goBack2 {
+    grid-column-start:2;
+    grid-column-end:3;
+    grid-row:3;
+    max-width: 100%;
+    max-height: 100%;
+    margin:10px;  
+    padding: 1em;
+    background-color: lavender;
+    border-radius: 50%; 
+    font-size: 2em;
+
+}
+
+
+#game_ui {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width:10%;
+    height:50%;
+    left: 88%;
+    top: 25%;
+    justify-content: space-around;
+    align-items:center;
+   
+}
+
+#game_over {
+    background-image: url(graphics/youLost.svg);
+    background-color: lavender;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+}
+
+#level_complete {
+    background-image: url(graphics/youWon.svg);
+    background-color: lavender;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+}
+ 
+#time_board {
+    display:flex;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    height:30%;
+    width:100%;
+    padding:2px;
+
+}
+#currentTime {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:100%; 
+
+}
+
+
+.sec30 {
+    background-image: url(graphics/time_30.svg);
+}
+
+.sec29 {
+    background-image: url(graphics/time_29.svg);
+}
+.sec28 {
+    background-image: url(graphics/time_28.svg);
+}
+.sec27 {
+    background-image: url(graphics/time_27.svg);
+}
+.sec26 {
+    background-image: url(graphics/time_26.svg);
+}
+.sec25 {
+    background-image: url(graphics/time_25.svg);
+}
+.sec24 {
+    background-image: url(graphics/time_24.svg);
+}
+.sec23 {
+    background-image: url(graphics/time_23.svg);
+}
+.sec22 {
+    background-image: url(graphics/time_22.svg);
+}
+.sec21 {
+    background-image: url(graphics/time_21.svg);
+}
+.sec20 {
+    background-image: url(graphics/time_20.svg);
+}
+.sec19 {
+    background-image: url(graphics/time_19.svg);
+}
+.sec18 {
+    background-image: url(graphics/time_18.svg);
+}
+.sec17 {
+    background-image: url(graphics/time_17.svg);
+}
+.sec16 {
+    background-image: url(graphics/time_16.svg);
+}
+.sec15 {
+    background-image: url(graphics/time_15.svg);
+}
+.sec14 {
+    background-image: url(graphics/time_14.svg);
+}
+.sec13 {
+    background-image: url(graphics/time_13.svg);
+}
+.sec12 {
+    background-image: url(graphics/time_12.svg);
+}
+.sec11 {
+    background-image: url(graphics/time_11.svg);
+}
+.sec10 {
+    background-image: url(graphics/time_10.svg);
+}
+.sec9 {
+    background-image: url(graphics/time_9.svg);
+}
+.sec8 {
+    background-image: url(graphics/time_8.svg);
+}
+.sec7 {
+    background-image: url(graphics/time_7.svg);
+}
+.sec6 {
+    background-image: url(graphics/time_6.svg);
+}
+.sec5 {
+    background-image: url(graphics/time_5.svg);
+}
+.sec4 {
+    background-image: url(graphics/time_4.svg);
+}
+.sec3 {
+    background-image: url(graphics/time_3.svg);
+}
+.sec2 {
+    background-image: url(graphics/time_2.svg);
+}
+.sec1 {
+    background-image: url(graphics/time_1.svg);
+}
+
+
+
+#health_board{
+    display:flex;
+    background-size:50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/3;
+    height:50%;
+    width:100%;
+    padding:2px;
+}
+
+#currentLives {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:100%;
+}
+.heart3{
+    background-image: url(graphics/full_life.svg);
+}
+.heart2 {
+    background-image: url(graphics/half_life.svg);
+}
+
+.heart1 {
+    background-image: url(graphics/last_life.svg); 
+}
+
+#score_board {
+    display:flex;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    height:30%;
+    width:100%;
+    padding:2px;
+
+}
+#currentScore {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:100%; 
+}
+.score0 {
+    background-image: url(graphics/0_points.svg);
+}
+.score1 {
+    background-image: url(graphics/1_points.svg);
+}
+.score2 {
+    background-image: url(graphics/2_points.svg);
+}
+.score3 {
+    background-image: url(graphics/3_points.svg);
+}
+.score4 {
+    background-image: url(graphics/4_points.svg);
+}
+.score5 {
+    background-image: url(graphics/5_points.svg);
+}
+
+#home_container {
+    display:flex;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    height:60%;
+    width:100%;
+    padding:2px;
+
+}
+
+#home_button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:100%;
+}
+.home_icon {
+    background-image: url(graphics/home_button.svg);
+}
+
+#sound_container {
+    display:flex;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1/1;
+    height:60%;
+    width:100%;
+    padding:2px;
+
+}
+
+#sound_button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+    height:100%;
+}
+.soundOn {
+    background-image: url(graphics/sound_on.svg);
+}
+
+.soundOff {
+    background-image:url(graphics/sound_off.svg);
+}
+
+
+
+#biscuit_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#biscuit_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/biscuit.svg);
+    background-size: cover;
+}
+
+#donut_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+
+#donut_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/donut.svg);
+    background-size: cover;
+}
+
+#ball_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#ball_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/tennis_ball.svg);
+    background-size: cover;
+}
+
+#chickenLeg_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#chickenLeg_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/chicken_leg.svg);
+    background-size: cover;
+}
+
+#torch_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#torch_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/torch.svg);
+    background-size: cover;
+}
+
+#note_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#note_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/note.svg);
+    background-size: cover;
+}
+
+#footprints_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#footprints_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/footprints.svg);
+    background-size: cover;
+}
+
+#Mglasses_container {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 16/14;
+}
+
+#Mglasses_sprite {
+    width: 100%;
+    height: 100%;
+    background-image: url(graphics/magnifying_glasses.svg);
+    background-size: cover;
+}
+
+/* positions */
+
+.position1 {
+    left: 10%;
+    top: -50%
+}
+
+.position2 {
+    left: 40%;
+    top: -20%;
+}
+
+.position3 {
+    left: 30%;
+    top: -30%;
+}
+
+.position4 {
+    left: 60%;
+    top: -33%
+}
+
+.position5 {
+    left: 75%;
+    top: -15%;
+
+}
+
+.position6 {
+    left: 4%;
+    top: -22%;
+}
+
+.position7 {
+    left: 20%;
+    top: -40%;
+}
+
+.position8 {
+    left: 68%;
+    top: -25%;
+}
+
+.fallDown {
+    animation: fallDown 3.8s infinite ease-in-out;
+}
+/*speeds*/
+.speed1 {
+    animation-duration: 3.8s;
+}
+.speed2 {
+    animation-duration: 4.7s;
+    animation-delay: .3s;
+}
+.speed3 {
+    animation-duration: 3.9s;
+    animation-delay: .2s;
+}
+.speed4 {
+    animation-duration: 4.1s;
+    animation-delay: .1s;
+}
+.speed5 {
+    animation-duration: 4.4s;
+    animation-delay: .5s;
+}
+.speed6 {
+    animation-duration: 3.6s;
+    animation-delay: 1.0s;
+}
+.speed7 {
+    animation-duration: 4.5s;
+    animation-delay: .5s;
+}
+.speed8 {
+    animation-duration: 4.2s;
+    animation-delay: 1.2s;
+}
+.speed9 {
+    animation-duration: 4s;
+    animation-delay: .7s;
+}
+
+@keyframes fallDown {
+    0% {
+        transform: translateY(-200%);
+    }
+    
+    100% {
+        transform: translateY(900%);
+    }
+}
+
+.moveSide {
+    animation: moveSide 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes moveSide {
+    from {
+        transform: translateX(-200%);
+    }
+
+    to {
+        transform: translateX(400%);
+    }
+}
+
+.wiggleDisappear {
+    animation: wiggle_disappear;
+    animation-duration: 1.5s;
+}
+
+@keyframes wiggle_disappear {
+    0% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg) scale(0);
+
+    }
+}
+
+.zoomIn {
+    animation: zoomIn 0.5s linear;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(3);
+    }
+}
+
+.stop {
+    animation-play-state: paused;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* #assets main{
+    width: 30%;
+} */
+
+.asset {
+    width: 30%;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#game_over,
+#level_complete {
+    position: absolute;
+    background-color: rgb(97, 56, 121);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+
+
+}

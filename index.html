@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="game.css" />
+    <title>Dog detective</title>
+  </head>
+
+  <body id="home">
+    <header>
+      <h1>Dog detective: the game!</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Game</a></li>
+          <li><a href="assets.html">Assets</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="screen">
+        <div id="game" class="hidden">
+          <div id="game_background"></div>
+          <div id="game_sprites">
+            <div id="biscuit_container">
+              <div id="biscuit_sprite"></div>
+            </div>
+            <div id="donut_container">
+              <div id="donut_sprite"></div>
+            </div>
+            <div id="ball_container">
+              <div id="ball_sprite"></div>
+            </div>
+            <div id="chickenLeg_container">
+              <div id="chickenLeg_sprite"></div>
+            </div>
+            <div id="torch_container">
+              <div id="torch_sprite"></div>
+            </div>
+            <div id="note_container">
+              <div id="note_sprite"></div>
+            </div>
+            <div id="footprints_container">
+              <div id="footprints_sprite"></div>
+            </div>
+            <div id="Mglasses_container">
+              <div id="Mglasses_sprite"></div>
+            </div>
+          </div>
+          <div id="game_foreground"></div>
+          <div id="game_ui">
+            <div id="score_board"><span id="currentScore"></span></div>
+            <div id="health_board"><span id="currentLives"></span></div>
+            <div id="time_board"><span id="currentTime"></span></div>
+            <div id="home_container"><span id="home_button"></span></div>
+            <div id="sound_container"><span id="sound_button"></span></div>
+          </div>
+          <div id="sounds">
+            <audio id="BadSound" src="sounds/BadSound4.mp3"></audio>
+            <audio id="GoodSound" src="sounds/GoodSound.mp3"></audio>
+            <audio id="BgMusic" src="sounds/BgMusic.mp3"></audio>
+            <audio id="ButtonSound" src="sounds/ButtonSound.mp3"></audio>
+            <audio id="WinMusic" src="sounds/WinSound.mp3"></audio>
+            <audio id="LoseMusic" src="sounds/LoseSound.mp3"></audio>
+          </div>
+        </div>
+        <div id="title_screen" class="hidden">
+          <img class="gameLogo" src="graphics/game_full_logo.svg" alt="" />
+          <div id="playNow">Play now</div>
+          <div id="seeInstructions">Instructions</div>
+        </div>
+        <div id="instructions_screen" class="hidden">
+          <h1 id="instructions">Game instructions</h1>
+          <p>Help Dog Detective solve the case by collecting clues:</p>
+          <div class="instruction_img">
+            <img class="goodExample" src="graphics/footprints.svg" alt="" />
+            <img class="goodExample" src="graphics/note.svg" alt="" />
+            <img class="goodExample" src="graphics/magnifying_glasses.svg" alt="" />
+            <img class="goodExample" src="graphics/torch.svg" alt="" />
+          </div>
+          <p>Be careful not to get him distracted by delicious foods and toys!</p>
+          <div class="instruction_img">
+            <img class="badExample" src="graphics/donut.svg" alt="" />
+            <img class="badExample" src="graphics/chicken_leg.svg" alt="" />
+            <img class="badExample" src="graphics/biscuit.svg" alt="" />
+            <img class="badExample" src="graphics/tennis_ball.svg" alt="" />
+          </div>
+          <div id="back">Back</div>
+        </div>
+        <div id="game_over" class="hidden">
+          <div id="you_lost">
+            <p>Dog detective got distracted and failed to solve the case.</p>
+            <p>Now he's sad and unemployed!</p>
+          </div>
+
+          <div class="play_again1">Try again</div>
+          <div class="goBack1">Title screen</div>
+        </div>
+        <div id="level_complete" class="hidden">
+          <div id="you_won">
+            <p>Congratulations, you helped dog detective collect all the clues!</p>
+            <p>Now he has a new good boy badge!</p>
+          </div>
+
+          <div class="play_again2">Play again</div>
+          <div class="goBack2">Title screen</div>
+        </div>
+      </section>
+      <aside id="game_info">
+        <p>Dog Detective was called in the middle of the night to attend to a crime scene.</p>
+        <p>When he arrived, he knew that this case needed all his focus and concentration in order to get solved.</p>
+        <p>Help Dog Detective collecting clues and solve the case.</p>
+        <p>Be careful not to get him distracted by delicious food and toys!</p>
+      </aside>
+    </main>
+    <footer></footer>
+    <script src="game.js"></script>
+  </body>
+</html>
