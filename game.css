@@ -717,7 +717,9 @@ p {
   width: 100vw;
 } */
 .asset {
-  min-width: 30vw;
+  max-width: 30%;
+}
+.asset_scene {
   max-width: 90vw;
 }
 
